@@ -9,7 +9,11 @@
                 <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" TextMode="SingleLine" placeholder="Name"></asp:TextBox>
                 <label for="MainContent_txtNombre">Name</label>
             </div>
-
+            <div class="form-floating">
+    <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" TextMode="SingleLine" placeholder="Apellido"></asp:TextBox>
+    <label for="MainContent_txtApellido">Apellido</label>
+</div>
+            
             <div class="form-floating">
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email"></asp:TextBox>
                 <label for="MainContent_txtEmail">Email address</label>
@@ -17,7 +21,7 @@
 
             <div class="form-floating">
                 <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password"></asp:TextBox>
-                <label for="MainContent_txtPass">Password</label>
+                <label for="MainContent_txtPass">Contrasena</label>
                 <asp:RequiredFieldValidator id="RequiredFieldValidatorPass"
                     ControlToValidate="txtPass"
                     Display="Dynamic"
@@ -31,5 +35,6 @@
         <a href="Login.aspx">¿Ya estas registrado?</a>
     </div>
     <asp:Label ID="lblError" runat="server" Text="" CssClass="error"></asp:Label>
+    </div>
 </asp:Content>
  

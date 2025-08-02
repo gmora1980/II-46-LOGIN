@@ -50,7 +50,7 @@ Public Class Login
 
         ' Validar el usuario
         If VerificarUsuario(usuario) Then
-            Response.Redirect("Default.aspx")
+            Response.Redirect("Home.aspx")
         Else
 
             lblError.Text = "Correo electrónico o contraseña inválidos."

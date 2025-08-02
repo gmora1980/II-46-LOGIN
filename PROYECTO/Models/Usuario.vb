@@ -16,17 +16,18 @@
 
     ' Método para convertir un DataTable a un objeto Usuario
     Public Function dtToUsuario(dataTable As DataTable) As Usuario
-        If dataTable IsNot Nothing AndAlso dataTable.Rows.Count > 0 Then
-            Dim row = dataTable.Rows(0)
-            Return New Usuario() With {
-                .Id = Convert.ToInt32(row("ID")),
-                .Nombre = Convert.ToString(row("NOMBRE")),
-                .Apellido = Convert.ToString(row("APELLIDOS")),
-                .Email = Convert.ToString(row("EMAIL")),
-                .Password = Convert.ToString(row("CONTRASEÑA"))
-            }
+        If dataTable Is Nothing OrElse dataTable.Rows.Count = 0 Then
+            Return Nothing
         End If
-        Return Nothing
+        Dim row = dataTable.Rows(0)
+        Dim usuarios As New Usuario() With {
+            .Id = Convert.ToInt32(row("ID")),
+            .Nombre = Convert.ToString(row("NOMBRE")),
+            .Apellido = Convert.ToString(row("APELLIDOS")),
+            .Email = Convert.ToString(row("EMAIL")),
+            .Password = Convert.ToString(row("CONTRASEÑA"))
+        }
+        Return usuarios
     End Function
 
 
