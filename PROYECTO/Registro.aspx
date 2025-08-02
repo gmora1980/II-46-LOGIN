@@ -3,11 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
         <div class="card-body">
-            <h2 class="h4 mb-3 text-center">Create an Account</h2>
+            <h2 class="h4 mb-3 text-center">Crear Cuenta</h2>
 
             <div class="form-floating">
                 <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" TextMode="SingleLine" placeholder="Name"></asp:TextBox>
-                <label for="MainContent_txtNombre">Name</label>
+                <label for="MainContent_txtNombre">Nombre</label>
             </div>
             <div class="form-floating">
     <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" TextMode="SingleLine" placeholder="Apellido"></asp:TextBox>
@@ -16,12 +16,12 @@
             
             <div class="form-floating">
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email"></asp:TextBox>
-                <label for="MainContent_txtEmail">Email address</label>
+                <label for="MainContent_txtEmail">Correo Electronico</label>
             </div>
 
             <div class="form-floating">
                 <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password"></asp:TextBox>
-                <label for="MainContent_txtPass">Contrasena</label>
+                <label for="MainContent_txtPass">Contraseña</label>
                 <asp:RequiredFieldValidator id="RequiredFieldValidatorPass"
                     ControlToValidate="txtPass"
                     Display="Dynamic"
